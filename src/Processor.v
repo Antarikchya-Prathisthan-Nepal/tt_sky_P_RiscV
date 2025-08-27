@@ -100,8 +100,7 @@ GPIO gpio_module (
     assign PCPlus4F = PCF + 4;
 
 //Instruction Memory
-    
-   // Instruction Memory
+   
     Instruction_Memory im_module (
         .CLK(CLK),
         .WE(imem_WE),
@@ -177,7 +176,7 @@ GPIO gpio_module (
     
     //immediate extension
     
-    immediate immediate_module ( // checked
+    immediate immediate_module ( 
         .InstrD(InstrD[31:7]),
         .ImmSrcD(ImmSrcD),
         .ImmExtD(ImmExtD)
@@ -185,7 +184,7 @@ GPIO gpio_module (
 
     // Registers
     
-    Registers register_module (     //checked
+    Registers register_module ( 
         .CLK(CLK),
         .A1(InstrD[19:15]),
         .A2(InstrD[24:20]),

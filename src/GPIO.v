@@ -12,7 +12,7 @@ module GPIO (
 
     parameter GPIO_ADDR = 32'h80000000; // Memory-mapped address
 
-    // Proper initialization
+    // initialization
     initial begin
         gpio_pin = 1'b0;
         RD = 32'b0;

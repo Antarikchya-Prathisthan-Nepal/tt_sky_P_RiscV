@@ -24,7 +24,7 @@ always @(*) begin
         end
 
         2'b10: begin
-            // Using nested if-else instead of multi-bit case
+            
             if (funct3 == 3'b000 && opcode_bit5 == 1'b1 && funct7_bit5 == 1'b0)
                 ALUControlD = 4'b0000; // R or I type addition
             else if (funct3 == 3'b000 && opcode_bit5 == 1'b1 && funct7_bit5 == 1'b1)

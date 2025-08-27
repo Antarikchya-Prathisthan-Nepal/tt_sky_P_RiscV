@@ -13,7 +13,7 @@ module PC (
 
     assign PCFI = PCSrcE ? PCTargetE : PCPlus4F;
 
-    // Proper initialization
+    // initialization
     initial begin
         PCF = 32'b0; // Initialize PC to 0
     end 

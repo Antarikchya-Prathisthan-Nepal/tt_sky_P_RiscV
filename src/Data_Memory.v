@@ -7,7 +7,7 @@ module Data_Memory (
     input [31:0] WD,
     output [31:0] RD
 );
-    // Increased memory size for better functionality
+    // Increase memory size for better functionality
     reg [31:0] mem [0:15];  // 256 bytes of data memory (was only 44 bytes)
     
     // Check for word alignment (lower 2 bits must be 00)

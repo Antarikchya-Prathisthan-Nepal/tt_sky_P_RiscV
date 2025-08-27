@@ -49,7 +49,7 @@ module Hazard_Unit(
         FlushD = PCSrcE;
         FlushE = lwStall || PCSrcE;
 
-        // ForwardAE logic with proper zero register handling
+        // ForwardAE logic
         if ((Rs1E == RdM) && RegWriteM && (Rs1E != 5'b0))
             ForwardAE = 2'b10;  // Forward from Memory stage
         else if ((Rs1E == RdW) && RegWriteW && (Rs1E != 5'b0))
@@ -57,7 +57,7 @@ module Hazard_Unit(
         else
             ForwardAE = 2'b00;  // No forwarding
 
-        // ForwardBE logic with proper zero register handling    
+        // ForwardBE logic   
         if ((Rs2E == RdM) && RegWriteM && (Rs2E != 5'b0))
             ForwardBE = 2'b10;  // Forward from Memory stage
         else if ((Rs2E == RdW) && RegWriteW && (Rs2E != 5'b0))

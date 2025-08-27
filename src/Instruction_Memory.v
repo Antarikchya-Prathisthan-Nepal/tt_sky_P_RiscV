@@ -7,7 +7,7 @@ module Instruction_Memory (
     input wire [31:0] WD,     // Write data from UART
     output wire [31:0] RD     // Instruction output
 );
-    // Increased memory size - 256 words (1KB)
+    // Increase memory size - 256 words (1KB)
     reg [31:0] memory [0:63];
     
     // Bounds checking

@@ -18,7 +18,7 @@ module UART (
 
     // UART parameters - FIXED for Tiny Tapeout
     parameter CLK_FREQ = 50_000_000; // 50 MHz (Tiny Tapeout standard)
-    parameter BAUD_RATE = 9600;      // Reduced for reliability
+    parameter BAUD_RATE = 9600;      // Standard baud rate
     localparam BAUD_COUNT = CLK_FREQ / BAUD_RATE; // Clock cycles per bit
     
     // Bounds checking for baud count
