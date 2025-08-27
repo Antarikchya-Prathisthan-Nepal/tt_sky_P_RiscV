@@ -27,8 +27,26 @@ module tb ();
   wire VGND = 1'b0;
 `endif
 
+reg uart_rx;
+wire uart_tx, gpio_pin;
+
+always @(*) begin
+    
+    ui_in[7:4] = 4'b0;
+    ui_in[3] = uart_rx;     // UART RX on bit 3 per pinout
+    ui_in[2:0] = 3'b0;
+
+  end
+
+  initial begin
+    uart_rx = 1'b1; // UART idle state
+end
+
+  assign uart_tx = uo_out[4];   // uo[4]: "uart_tx"
+  assign gpio_pin = uo_out[5];  // uo[5]: "gpio_pin"
+
   // Replace tt_um_example with your module name:
-  tt_um_example user_project (
+  tt_um_trish_P_Risc tt_um_trish_P_Risc (
 
       // Include power ports for the Gate Level test:
 `ifdef GL_TEST
